@@ -1,5 +1,5 @@
 import { test as basetest, expect} from '@playwright/test';
-import { LoginCroweCXCommercialLendingPage } from '../../pages/apps/Apps/login_croweCX_commercial_lending';
+import { LoginCroweCXCommercialLendingPage } from '../../pages/apps/login_croweCX_commercial_lending';
 
 type fixtures = {
     login: LoginCroweCXCommercialLendingPage;
@@ -8,7 +8,7 @@ type fixtures = {
 export const test = basetest.extend<fixtures>({
     login: async ({ page }, use) => {
         const login = new LoginCroweCXCommercialLendingPage(page);
-        // Perform login actions
+        // Perform login actions.
             await use(login);
         }
     });
