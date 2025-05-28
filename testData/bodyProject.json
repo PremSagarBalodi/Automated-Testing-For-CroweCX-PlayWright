@@ -1,0 +1,29 @@
+{
+    "bodies": {
+        "body_projectTemplates": {
+            "crowe_name": "Automated-Project-Template-1",
+            "crowe_ProjectTypeId@odata.bind": "/crowe_projecttypes(62906710-aeb6-ec11-983f-000d3a5c6519)"
+        },
+        "body_ProjectMilestones": {
+            "crowe_name": "Automated-Milestone-1",
+            "crowe_displayinportal": 1,
+            "crowe_ProjectId_crowe_projecttemplate@odata.bind": "/crowe_projecttemplates({{crowe_projecttemplateid}})"
+        },
+        "body_ProjectActionItemTemplates": {
+            "crowe_name": "Automated-Action-Item-Template-1",
+            "crowe_ActivityTypeId@odata.bind": "/crowe_projectactionitemactivitytypes(b6c17d89-aaff-ed11-8f6e-0022482a4d7a)",
+            "crowe_ProjectRoleAssignmentId@odata.bind": "/crowe_projectroleassignments(b22a2108-6890-ef11-ac21-000d3a32399c)",
+            "crowe_ProjectTemplateId@odata.bind": "/crowe_projecttemplates({{crowe_projecttemplateid}})",
+            "crowe_ProjectMilestoneId@odata.bind": "/crowe_projectmilestones({{crowe_projectmilestoneid}})"
+        },
+        "body_Project": {
+            "crowe_name": "Automated-Project-1",
+            "crowe_description": "This is an automated project that has been created using a Project Template",
+            "crowe_startdate": "12/16/2024",
+            "crowe_CustomerId_account@odata.bind": "/accounts(4c3a6838-4fa1-ed11-aad1-6045bd006a96)",
+            "crowe_ProjectContextId_account@odata.bind": "/accounts(4c3a6838-4fa1-ed11-aad1-6045bd006a96)",
+            "crowe_ProjectTemplateId@odata.bind": "/crowe_projecttemplates({{crowe_projecttemplateid}})"
+        }
+    },
+    "key": "new value"
+}

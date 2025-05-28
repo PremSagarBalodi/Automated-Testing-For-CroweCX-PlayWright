@@ -1,0 +1,37 @@
+{
+    "bodies": {
+        "body": {
+            "crowe_Customer_account@odata.bind": "/accounts(06390ad4-e8b1-ec11-9840-000d3a5c493a)",
+            "crowe_StatementPeriod@odata.bind": "/crowe_statementperiods(c736b8df-f947-ee11-be6d-000d3a34e8d2)",
+            "crowe_coveredmonths": 12,
+            "crowe_submitteddate": "1/16/2025",
+            "crowe_PreparationTypeId@odata.bind": "/crowe_financialstatementpreparationtypes(4d16bbea-5fa3-ef11-8a6a-000d3a5c8970)"
+        },
+        "body1": {
+            "crowe_Statement@odata.bind": "/crowe_statements({{crowe_statementid}})",
+            "crowe_name": "Cash",
+            "crowe_currencyvalue": 1000,
+            "crowe_SpreadAccount@odata.bind": "/crowe_spreadaccounts(84d1d53e-6a6f-ee11-8df0-000d3a36887b)",
+            "crowe_SourceStatementId@odata.bind": "/crowe_financialstatementtypes(c85a0a25-9a3b-ee11-bdf4-000d3a34eb2a)",
+            "crowe_Category@odata.bind": "/crowe_spreadaccountcategories(e79918b1-973b-ee11-bdf4-000d3a34e094)"
+        },
+        "body2": {
+                "crowe_Statement@odata.bind": "/crowe_statements(c3757b02-2c8d-ef11-ac21-6045bd014c0e)",
+                "crowe_name": "Overdrafts",
+                "crowe_currencyvalue": 1000,
+                "crowe_SpreadAccount@odata.bind": "/crowe_spreadaccounts(00d2d53e-6a6f-ee11-8df0-000d3a36887b)",
+                "crowe_SourceStatementId@odata.bind": "/crowe_financialstatementtypes(c85a0a25-9a3b-ee11-bdf4-000d3a34eb2a)",
+                "crowe_Category@odata.bind": "/crowe_spreadaccountcategories(4f7511b2-973b-ee11-bdf4-000d3a34e7c4)"
+             },
+        "body3": {
+            "crowe_Statement@odata.bind": "/crowe_statements({{crowe_statementid}})",
+            "crowe_name": "Overdrafts",
+            "crowe_currencyvalue": 1000,
+            "crowe_SpreadAccount@odata.bind": "/crowe_spreadaccounts(00d2d53e-6a6f-ee11-8df0-000d3a36887b)",
+            "crowe_SourceStatementId@odata.bind": "/crowe_financialstatementtypes(c85a0a25-9a3b-ee11-bdf4-000d3a34eb2a)",
+            "crowe_Category@odata.bind": "/crowe_spreadaccountcategories(4f7511b2-973b-ee11-bdf4-000d3a34e7c4)"
+
+        }
+    },
+    "key": "new value"
+}

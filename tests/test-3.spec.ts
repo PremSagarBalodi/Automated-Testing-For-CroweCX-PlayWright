@@ -1,0 +1,33 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://login.microsoftonline.com/c1cedd73-d687-4c40-89f5-7fbbb48a8af3/oauth2/authorize?client_id=00000007-0000-0000-c000-000000000000&response_type=code%20id_token&scope=openid%20profile&state=OpenIdConnect.AuthenticationProperties%3DMAAAADlye0wtPhHwmkMADTozeEBdCDuzGMJJCyrkxb1E5GIstNxYXs4Dnr2WG-56vQ1hjAEAAAABAAAACS5yZWRpcmVjdDVodHRwczovL2Nyb3dlY29tbWJhbmtpbmdwbGF0Zm9ybS1xYS5jcm0uZHluYW1pY3MuY29tLw%26RedirectTo%3DMAAAADlye0wtPhHwmkMADTozeEDr746leL3WysQqMn9iH%252fp1tQZyk%252bKSL5e1bD9fqq9ZM2h0dHBzOi8vY3Jvd2Vjb21tYmFua2luZ3BsYXRmb3JtLXFhLmNybS5keW5hbWljcy5jb20v%26RedirectToForMcas%3Dhttps%253a%252f%252fcrowecommbankingplatform-qa.crm.dynamics.com%252f&response_mode=form_post&nonce=638839316038134753.Zjk2YTgzMTItZmRmYi00ZWFhLTgyMWUtYjFiMzFkNzI4YTRmOThkYTk2MDYtNjQxNC00NjkxLWE4NDctNmUyODY5MWY1ZDMy&redirect_uri=https%3A%2F%2Fby2--namcrmlivesg644.crm.dynamics.com%2F&max_age=86400&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=ID_NET472&x-client-ver=8.3.0.0');
+  await page.goto('https://login.microsoftonline.com/c1cedd73-d687-4c40-89f5-7fbbb48a8af3/oauth2/authorize?client_id=00000007-0000-0000-c000-000000000000&response_type=code%20id_token&scope=openid%20profile&state=OpenIdConnect.AuthenticationProperties%3DMAAAADlye0wtPhHwmkMADTozeEBdCDuzGMJJCyrkxb1E5GIstNxYXs4Dnr2WG-56vQ1hjAEAAAABAAAACS5yZWRpcmVjdDVodHRwczovL2Nyb3dlY29tbWJhbmtpbmdwbGF0Zm9ybS1xYS5jcm0uZHluYW1pY3MuY29tLw%26RedirectTo%3DMAAAADlye0wtPhHwmkMADTozeEDr746leL3WysQqMn9iH%252fp1tQZyk%252bKSL5e1bD9fqq9ZM2h0dHBzOi8vY3Jvd2Vjb21tYmFua2luZ3BsYXRmb3JtLXFhLmNybS5keW5hbWljcy5jb20v%26RedirectToForMcas%3Dhttps%253a%252f%252fcrowecommbankingplatform-qa.crm.dynamics.com%252f&response_mode=form_post&nonce=638839316038134753.Zjk2YTgzMTItZmRmYi00ZWFhLTgyMWUtYjFiMzFkNzI4YTRmOThkYTk2MDYtNjQxNC00NjkxLWE4NDctNmUyODY5MWY1ZDMy&redirect_uri=https%3A%2F%2Fby2--namcrmlivesg644.crm.dynamics.com%2F&max_age=86400&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=ID_NET472&x-client-ver=8.3.0.0&sso_reload=true');
+  await page.getByPlaceholder('Email, phone, or Skype').click();
+  await page.getByPlaceholder('Email, phone, or Skype').fill('bankingdemouser2@croweat.onmicrosoft.com');
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.locator('#i0118').fill('W');
+  await page.locator('#i0118').press('CapsLock');
+  await page.getByPlaceholder('Password').press('CapsLock');
+  await page.getByPlaceholder('Password').fill('War21329');
+  await page.getByRole('button', { name: 'Sign in' }).click();
+  await page.getByRole('button', { name: 'Yes' }).click();
+  await page.goto('https://crowecommbankingplatform-qa.crm.dynamics.com/main.aspx?forceUCI=1&pagetype=apps');
+  await page.locator('iframe[title="AppLandingPage"]').contentFrame().getByLabel('Crowe CX for Financial').click();
+  await page.goto('https://crowecommbankingplatform-qa.crm.dynamics.com/main.aspx?appid=88e84b7c-fcd4-ef11-8eea-6045bd006f50&pagetype=dashboard&id=ee2ea995-cc40-ee11-bdf3-000d3a4f1588&type=system&_canOverride=true');
+  await page.getByLabel('Spreads').locator('div').nth(3).click();
+  await page.getByLabel('New', { exact: true }).click();
+  await page.getByLabel('Name').click();
+  await page.getByLabel('Name').fill('Automated Spread');
+  await page.getByPlaceholder('Look for Spread Template').click();
+  await page.getByLabel('Search records for Spread').click();
+  await page.getByText('Commercial Spread').click();
+  await page.getByLabel('Save (CTRL+S)').dblclick();
+  await page.getByTestId('spread_b5ee4e9a-d53a-f011-b4cc-0022480c0ea4_header_editSpreadDialog_editSpreadButton').click();
+  await page.getByRole('alertdialog', { name: 'Edit Spread' }).dblclick();
+  await page.getByTestId('spread_b5ee4e9a-d53a-f011-b4cc-0022480c0ea4_header_editSpreadDialog_availableStatements_customerField').getByLabel('Open').click();
+  await page.getByTestId('spread_b5ee4e9a-d53a-f011-b4cc-0022480c0ea4_header_editSpreadDialog_availableStatements_customerOption_723acb34-50af-ec11-9840-000d3a5c493a').click();
+  await page.getByTestId('spread_b5ee4e9a-d53a-f011-b4cc-0022480c0ea4_header_editSpreadDialog_availableStatements_statement_fd662194-5135-f011-8c4e-6045bd052b17_addStatementButton').click();
+  await page.getByTestId('spread_b5ee4e9a-d53a-f011-b4cc-0022480c0ea4_header_editSpreadDialog_okButton').click();
+  await page.getByLabel('Refresh', { exact: true }).click();
+});
